@@ -11,7 +11,7 @@ class SchoolsController < ApplicationController
 	end
 
 	def create
-		@school = Schoo.new(school_params)
+		@school = School.new(school_params)
 		if @school.save
 			flash[:success] = "Added New School Successfully."
 			redirect_to @school

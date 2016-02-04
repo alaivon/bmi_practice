@@ -1,0 +1,35 @@
+
+<%= form_for @school do |f| %>
+
+	<div id="error_explanation">
+		<% if @school.errors.any? %>
+			<h2><%= pluralize(@school.errors.count, "error") %> prevented this from saving:</h2>
+			<ul>
+				<% @pschool.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+			<% end %>
+	</div>
+
+	<div class="select_city">
+		<%= f.label :city_id, "City" %>  <br>
+		<%= f.collection_select :city_id, City.all, :id, :name, include_blank: true %> 
+	</div>  
+
+	<br>
+
+	<div class="select_country">
+		<%= f.label :distance_id, "Distance" %> <br>
+		<%= f.grouped_collection_select :distance_id, City.all, :distances, :name, :id, :name, include_blank: true %>  
+	</div>
+	<br>
+	<div class="field">
+		<%= f.label :name, "School Name"  %> <br>
+		<%= f.text_field :name, placeholder: "Ex: 士林國小" %> 
+	</div>
+	<br>
+
+		<%= f.submit class: "button" %>
+
+<% end %>
