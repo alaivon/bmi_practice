@@ -21,7 +21,7 @@
 
 ## Model
 
-- Teacher (name ,email)
+- User (name ,email)
 	has_one :grades
 	
 
@@ -31,7 +31,7 @@
 	- has_many :grades
 
 
-- Grade (name, teacher_id)
+- Grade (name, User_id school_id)
 	- belongs_to :teacher
 	-	belongs_to :school
 	- has_many :students
@@ -43,8 +43,8 @@
 	- has_many :schools
 	- has_many :distances
 
-- Distance (dist_name, city_id)
-	- belongs :city
+- Distance (name, city_id)
+	- belongs_to :city
 	- has_many :schools
 
 ## Controller

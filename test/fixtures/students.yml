@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  name: MyString
+  birth: 2016-02-04
+  height: 1.5
+  weight: 1.5
+  bmi: 1.5
+  grade_id: 1
+  gender: MyString
+
+two:
+  number: 1
+  name: MyString
+  birth: 2016-02-04
+  height: 1.5
+  weight: 1.5
+  bmi: 1.5
+  grade_id: 1
+  gender: MyString
