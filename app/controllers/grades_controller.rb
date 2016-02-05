@@ -1,10 +1,7 @@
 class GradesController < ApplicationController
 	before_action :find_school
-	before_action :find_grade, except: [:index, :new, :create]
+	before_action :find_grade, except: [:new, :create]
 
-	def index
-		@grades = @school.grades
-	end
 
 	def show
 		

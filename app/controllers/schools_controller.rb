@@ -21,7 +21,7 @@ class SchoolsController < ApplicationController
 	end
 
 	def show
-		
+		@grades = @school.grades
 	end
 
 	def edit

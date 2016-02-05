@@ -48,7 +48,7 @@ $inside: #f5f5dc;
 			padding-bottom: 1rem;
 			padding-top: 0.2rem;
 		}
-		a {
+		.icon {
 			font-weight: 700;
 			text-decoration: none;
 			float: right;
@@ -58,5 +58,27 @@ $inside: #f5f5dc;
 				color: $inside;
 			}
 		}
+		.grade_list {
+		min-height: 100%;
+		height: 200%;
+		a {
+			color: #777;
+			text-decoration: none;
+			font-weight: 700;
+			&:hover {
+				color: $light;
 
+			}
+		}
+		h4 {
+			text-align: left;	
+			font-weight: 300;
+			padding-bottom: .3rem;
+		}
+			hr {
+				margin: 0;
+				width: 15%;
+				border-top: 1px solid green;
+		}
+}
 }
