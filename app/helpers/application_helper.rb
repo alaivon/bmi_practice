@@ -16,5 +16,9 @@ module ApplicationHelper
 
     alerts.join("\n").html_safe
   end
+
+  def serial_no(school, i=0)
+    school.created_on.strftime("%Y%m%d") +  sprintf('%03d',i+1).to_s
+  end
 	
 end

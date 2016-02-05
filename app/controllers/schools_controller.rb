@@ -3,7 +3,7 @@ class SchoolsController < ApplicationController
 	before_action :find_school, only: [:edit, :update, :show, :destroy]
 
 	def index
-		@school = School.all
+		@schools = School.all
 	end
 
 	def new
