@@ -47,8 +47,9 @@ body {
 #form {
 	height: 100%;
 	width: 30%;
-	margin: 0 auto 2em auto;
+	margin: auto auto 2em auto;
 	#error_explanation {
+		padding-top: 0;
 		h2 {
 			line-height: 3px;
 			font-size: 18px;
@@ -70,7 +71,6 @@ body {
 			width: 30em;
 			display: block;
 			height: 2px;
-			border: 0;
 			border-top: 1px solid $white;
 			margin: 1rem 0 0;	
 			padding-bottom: 1rem;
@@ -129,7 +129,7 @@ body {
 			text-decoration: none;
 			color: #db7093;
 	 	&:hover {
-	 		background: darken($white, 5%);
+	 		background: darken($white, 15%);
 	 		color: #db7093;	
 	   	-webkit-transition: background .25s ease-in-out;
 		}

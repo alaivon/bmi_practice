@@ -5,7 +5,7 @@
 		<% if @school.errors.any? %>
 			<h2><%= pluralize(@school.errors.count, "error") %> prevented this from saving:</h2>
 			<ul>
-				<% @pschool.errors.full_messages.each do |msg| %>
+				<% @school.errors.full_messages.each do |msg| %>
 					<li><%= msg %></li>
 				<% end %>
 			</ul>
