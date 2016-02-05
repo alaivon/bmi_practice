@@ -1,12 +1,15 @@
 <div id="show">
 	<h2 class="cf"><%= @school.city.name + @school.distance.name + @school.name %></h2>  
+	
 	<%= link_to edit_school_path(@school)  do %>
 		<i class="fa fa-pencil-square-o fa-lg"></i>
-		<i class="fa fa-plus-circle fa-lg"></i>
 	<% end %>
 	
 	<hr>
-	
+	<%= link_to new_school_grade_path(@school) do %>
+		<i class="fa fa-plus-circle fa-lg"></i>
+	<% end %>
+
 	
 
 

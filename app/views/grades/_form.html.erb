@@ -1,0 +1,25 @@
+
+<%= form_for [@school, @grade] do |f| %>
+
+	<div id="error_explanation">
+		<% if @grade.errors.any? %>
+			<h2><%= pluralize(@grade.errors.count, "error") %> prevented this from saving:</h2>
+			<ul>
+				<% @grade.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+			<% end %>
+	</div>
+
+	<br>
+
+	<div class="field">
+		<%= f.label :name, "Class Name"  %> <br>
+		<%= f.text_field :name, placeholder: "Ex: 3年2班" %> 
+	</div>
+	<br>
+
+		<%= f.submit class: "button" %>
+
+<% end %>

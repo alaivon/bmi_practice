@@ -1,3 +1,81 @@
 // Place all the styles related to the grades controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the schools controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$white: #FFFFFF;
+$highlight: #d2674e;
+$dark: #22292e;
+$light: #EDEFF5;
+$border: #E9E9E9;
+$inside: #f5f5dc;
+
+
+#table {
+	width: 50%;
+	margin: 0 auto 0 auto; 
+		hr {
+			width: 100%;
+			display: block;
+			height: 2px;
+			border-top: 1px solid $white;
+			margin: 1rem 0 0;	
+			padding-bottom: 1rem;
+			padding-top: 0.2rem;
+		}
+		a {
+			font-weight: 700;
+			text-decoration: none;
+			&:hover {
+				font-size: 15px;
+				color: $inside;
+			}
+		}
+
+}
+
+#grade_show {
+	width: 30%;
+	margin: 0 auto 0 auto;
+	h1 {
+		font-weight: 700;
+		text-align: center;
+	} 
+		h2 {
+			float: left;
+		}
+		hr {
+			width: 100%;
+			display: block;
+			height: 2px;
+			border-top: 1px solid $white;
+			margin: 1rem 0 0;	
+			padding-bottom: 1rem;
+			padding-top: 0.2rem;
+		}
+		.icon {
+			font-weight: 700;
+			text-decoration: none;
+			float: right;
+			color: lighten($dark, 20%);
+			&:hover {
+				font-size: 15px;
+				color: $inside;
+			}
+		}
+	.grade_list {
+		min-height: 100%;
+		height: 200%;
+		h4 {
+			text-align: left;	
+			font-weight: 300;
+			padding-bottom: .3rem;
+		}
+			hr {
+				width: 15%;
+				border-top: 1px solid green;
+		}
+	}
+}

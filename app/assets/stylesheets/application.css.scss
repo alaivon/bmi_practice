@@ -62,6 +62,11 @@ body {
 	.field {
 		padding-bottom: 1em;
 	}
+	h1 {
+		font-weight: 700;
+		text-align: center;
+
+	}
 	h2 {
 		font-weight: 500;
 		font-size: 30px;
@@ -112,11 +117,16 @@ body {
 		background: $white;
 		color: #db7093;
 		font-weight: 700;
+		outline: none;
 			&:hover {
+				outline: none;
 				background: darken($white, 5%);
 				color: #db7093;	
 		  	-webkit-transition: background .25s ease-in-out;
 		}
+			&:active {
+				outline: none;
+			}
 	}
 		.back {
 			background: $light;
@@ -128,10 +138,14 @@ body {
 			padding: 0 .5rem 0 .5rem;
 			text-decoration: none;
 			color: #db7093;
+			outline: none;
 	 	&:hover {
 	 		background: darken($white, 15%);
 	 		color: #db7093;	
 	   	-webkit-transition: background .25s ease-in-out;
+		}
+		&:active {
+		outline: none;
 		}
 	}
 }

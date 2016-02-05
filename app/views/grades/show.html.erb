@@ -1,0 +1,12 @@
+<div id="grade_show">
+	<h2><%= @grade.name %>(<%= @grade.school.name %>)</h2> 
+
+	<%= link_to edit_school_grade_path(@school,@grade), class: "icon"  do %>
+		<i class="fa fa-pencil-square-o fa-lg"></i>
+	<% end %>
+	<hr>
+	<%= link_to new_school_grade_path(@school), class: "icon" do %>
+		<i class="fa fa-plus-circle fa-lg"></i>
+		<% end %>
+
+</div>
