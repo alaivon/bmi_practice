@@ -1,0 +1,48 @@
+
+<%= form_for [@school, @grade, @student] do |f| %>
+
+<div id="error_explanation">
+	<% if @student.errors.any? %>
+		<h2><%= pluralize(@student.errors.count, "error") %> prevented this from saving:</h2>
+		<ul>
+			<% @student.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+		<% end %>
+</div>
+
+<br>
+
+<div class="field">
+	<%= f.label :name, "Student's Name"  %> <br>
+	<%= f.text_field :name, placeholder: "王小明 or Ming Wang" %> 
+</div>
+
+<div class="field">
+	<%= f.label :gender, "Gender"  %> <br>
+	<%= f.select :gender, options_for_select([ "Male", "Female" ], "Male") %>
+</div>
+
+<div class="f">
+	<%= f.label :birth, "Birthday"  %> <br>
+	<%= f.date_select :birth, start_year: Date.today.year - 70, end_year: Date.today.year %> 
+</div>  <br>
+
+<div class="field">
+	<%= f.label :height, "Height"  %> <br>
+	<%= f.text_field :height%> <em>cm</em>
+</div>
+
+<div class="field">
+	<%= f.label :weight, "Weight"  %> <br>
+	<%= f.text_field :weight %> <em>kg</em>
+</div>
+
+
+
+<br>
+
+	<%= f.submit class: "button" %>
+
+<% end %>

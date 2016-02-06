@@ -9,12 +9,13 @@ class StudentsController < ApplicationController
 	end
 
 	def new
-		@student = @grade.student.new
+		@student = @grade.students.new
 	end
 
 	def create
-		@student = @grade.student.build(student_params)
+		@student = @grade.students.build(student_params)
 		if @student.save
+			@student.update(bmi: (@student.weight / (@student.height/100)**2).round(2))
 			flash[:success] = "Congratulation! New member in your class."
 			redirect_to school_grade_path(@school, @grade)
 		else
@@ -54,8 +55,7 @@ private
 
 	def student_params
 		params.require(:student).permit(:number, :name, :birth,
-																		:height, :weight, :bmi,
-																		:gender)
+																		:height, :weight, :gender, :bmi)
 	end
 
 end
