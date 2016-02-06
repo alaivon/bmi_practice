@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+puts "Add Class"
+
+a = for i in 1..20 do
+	Grade.create!(name: "3年#{i}班", school_id: 1)	
+end

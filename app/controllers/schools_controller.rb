@@ -1,4 +1,4 @@
-class SchoolsController < ApplicationController
+class SchoolsController < AdminController
 
 	before_action :find_school, only: [:edit, :update, :show, :destroy]
 

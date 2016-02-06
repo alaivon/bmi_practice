@@ -1,4 +1,4 @@
-class StudentsController < ApplicationController
+class StudentsController < AdminController
 
 	before_action :find_school
 	before_action :find_grade

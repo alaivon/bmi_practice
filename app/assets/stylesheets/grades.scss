@@ -37,7 +37,7 @@ $inside: #f5f5dc;
 }
 
 #grade_show {
-	width: 30%;
+	width: 60%;
 	margin: 0 auto 0 auto;
 	h1 {
 		font-weight: 700;
@@ -63,6 +63,13 @@ $inside: #f5f5dc;
 			&:hover {
 				font-size: 15px;
 				color: $inside;
+			}
+		}
+		.table {
+			float: left;
+			width: 80%;
+			td {
+				text-align: center;
 			}
 		}
 	}

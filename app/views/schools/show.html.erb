@@ -1,5 +1,5 @@
 <div id="show">
-	<h2 class="cf"><%= @school.city.name + @school.distance.name + @school.name %></h2>  
+	<h2><%= @school.city.name + @school.distance.name + @school.name %></h2>  
 	
 	<%= link_to edit_school_path(@school), class: "icon"  do %>
 		<i class="fa fa-pencil-square-o fa-lg"></i>
@@ -11,9 +11,12 @@
 	<% end %>
 
 	<div class="grade_list">
-		<% @grades.each do |grade| %>
-			<h4><%= link_to grade.name, school_grade_path(@school, grade) %></h4> <hr>
+	 <ul>
+	 	<% @grades.each do |grade| %>
+
+			<li><h4><%= link_to grade.name, school_grade_path(@school, grade) %> |</h4> </li>
 		<% end %>
+	 </ul>
 	</div>
 
 

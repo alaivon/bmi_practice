@@ -1,10 +1,10 @@
-class GradesController < ApplicationController
+class GradesController < AdminController
 	before_action :find_school
 	before_action :find_grade, except: [:new, :create]
 
 
 	def show
-		
+		@students = @grade.students
 	end
 
 	def new

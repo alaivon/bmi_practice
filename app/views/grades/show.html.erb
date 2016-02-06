@@ -9,6 +9,38 @@
 		<i class="fa fa-plus-circle fa-lg"></i>
 		<% end %>
 
-		
+		<table class="table table-hover table-bordered">
+		<thead>
+			<tr>
+				<th>Student Id</th>
+				<th>Student Name</th>
+				<th>Birthday</th>
+				<th>Gender</th>
+				<th>Height</th>
+				<th>Weight</th>
+				<th>BMI</th>
+				<th>Options</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @students.each do |student| %>
+				<tr>
+					<td><%= student.number %></td>
+					<td><%= student.name %></td>
+					<td><%= student.birth %></td>
+					<td><%= student.gender %></td>
+					<td><%= student.height %> cm</td>
+					<td><%= student.weight %> kg</td>
+					<td><%= student.bmi %></td>
+					<td><%= link_to edit_school_grade_student_path(@school,@grade, student) do %>
+						<i class="fa fa-wrench"></i>
+					<% end %>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+
+	</table>
 
 </div>
