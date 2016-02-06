@@ -2,6 +2,7 @@
 
 	<h2><%= @grade.name %>(<%= @grade.school.name %>)</h2> 
 		
+	<% if user_signed_in? && @grade = current_user.grade %>
 	<%= link_to edit_school_grade_path(@school,@grade), class: "icon"  do %>
 		<i class="fa fa-pencil-square-o fa-lg"></i>
 	<% end %>
@@ -9,6 +10,7 @@
 	<%= link_to new_school_grade_student_path(@school,@grade), class: "icon" do %>
 		<i class="fa fa-plus-circle fa-lg"></i>
 		<% end %>
+	<% end %>
 
 		<table class="table table-hover table-bordered">
 		<thead>
@@ -35,7 +37,7 @@
 					<td><%= student.weight %> kg</td>
 					<td><%= student.bmi %></td>
 					<td>
-					<% if current_user == @grade.user %>
+					<% if user_signed_in? && @grade = current_user.grade %>
 					<%= link_to edit_school_grade_student_path(@school,@grade, student) do %>
 						<i class="fa fa-wrench"></i>
 					<% end %>

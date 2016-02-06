@@ -6,18 +6,21 @@
 	<% end %>
 	
 	<hr>
-		<% if user_signed_in? && current_user.grade.nil? %>
 			
+	<% if user_signed_in? && current_user.grade.nil? %>
 	<%= link_to new_school_grade_path(@school), class: "icon" do %>
 		<i class="fa fa-plus-circle fa-lg"></i>
 	<% end %>
+	
+
 		<% end %>
+
 
 	<div class="grade_list">
 	 <ul>
 	 	<% @grades.each do |grade| %>
 
-			<li><h4><%= link_to grade.name, school_grade_path(@school, grade) %> |</h4> </li>
+			<li class="cf"><h4><%= link_to grade.name, school_grade_path(@school, grade) %> |</h4> </li>
 		<% end %>
 	 </ul>
 	</div>

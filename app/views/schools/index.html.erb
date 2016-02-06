@@ -1,7 +1,9 @@
 <div id="table">
 	
 	<h2>School List</h2>  
+	<% if user_signed_in? %>
 	<%= link_to "New School", new_school_path  %>
+	<% end %>
 	<hr>
 	<table class="table table-bordered">
 		<thead>
