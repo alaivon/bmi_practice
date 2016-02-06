@@ -6,7 +6,7 @@
 	<% end %>
 	
 	<hr>
-		<% if current_user.grade.nil? %>
+		<% if user_signed_in? && current_user.grade.nil? %>
 			
 	<%= link_to new_school_grade_path(@school), class: "icon" do %>
 		<i class="fa fa-plus-circle fa-lg"></i>
