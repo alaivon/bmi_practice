@@ -1,6 +1,7 @@
 <div id="grade_show">
 	<h2><%= @grade.name %>(<%= @grade.school.name %>)</h2> 
-
+	<% if current_user == @grade.user %>
+		
 	<%= link_to edit_school_grade_path(@school,@grade), class: "icon"  do %>
 		<i class="fa fa-pencil-square-o fa-lg"></i>
 	<% end %>
@@ -8,6 +9,7 @@
 	<%= link_to new_school_grade_student_path(@school,@grade), class: "icon" do %>
 		<i class="fa fa-plus-circle fa-lg"></i>
 		<% end %>
+	<% end %>
 
 		<table class="table table-hover table-bordered">
 		<thead>
@@ -33,8 +35,13 @@
 					<td><%= student.height %> cm</td>
 					<td><%= student.weight %> kg</td>
 					<td><%= student.bmi %></td>
-					<td><%= link_to edit_school_grade_student_path(@school,@grade, student) do %>
+					<td>
+					<% if current_user == @grade.user %>
+					<%= link_to edit_school_grade_student_path(@school,@grade, student) do %>
 						<i class="fa fa-wrench"></i>
+					<% end %>
+					<% else %>
+						<i class="fa fa-wrench", style="opacity: 0.4"></i>
 					<% end %>
 					</td>
 				</tr>
