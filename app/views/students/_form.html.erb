@@ -13,6 +13,10 @@
 </div>
 
 <br>
+<div class="field">
+	<%= f.label :number, "Student ID"  %> <br>
+	<%= f.number_field :number, :max => 99999999 %> 
+</div>
 
 <div class="field">
 	<%= f.label :name, "Student's Name"  %> <br>
@@ -31,12 +35,12 @@
 
 <div class="field">
 	<%= f.label :height, "Height"  %> <br>
-	<%= f.text_field :height%> <em>cm</em>
+	<%= f.number_field :height, :step => 0.1, :max => 300 %> <em>cm</em>
 </div>
 
 <div class="field">
 	<%= f.label :weight, "Weight"  %> <br>
-	<%= f.text_field :weight %> <em>kg</em>
+	<%= f.number_field :weight, :step => 0.1, :max => 200 %> <em>kg</em>
 </div>
 
 

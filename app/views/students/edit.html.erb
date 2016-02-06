@@ -1,0 +1,10 @@
+<div id="stu_form">
+	<h1><%= @grade.name %></h1>
+	<h2>Edit Class Member </h2> 
+	<hr>
+
+	<%= render 'form' %>
+	<hr>
+
+	<%= link_to "Back", school_grade_path(@school, @grade), class: "back"  %>
+</div>

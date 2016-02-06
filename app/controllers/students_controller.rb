@@ -29,6 +29,7 @@ class StudentsController < ApplicationController
 
 	def update
 		if @student.update(student_params)
+			@student.update(bmi: (@student.weight / (@student.height/100)**2).round(2))
 			flash[:success] = "Updated class member successfully."
 			redirect_to school_grade_path(@school, @grade)
 		else
