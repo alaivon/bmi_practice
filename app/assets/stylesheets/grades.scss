@@ -71,5 +71,20 @@ $inside: #f5f5dc;
 			td {
 				text-align: center;
 			}
+			td.options {
+				text-align: left;
+				padding-left: 1rem;
+				font-size: 14px;
+				.fa-times{
+					padding-left: 1rem;
+				}
+				 .fa-wrench, .fa-times {
+				 	color: $highlight;
+				 	&:hover {
+				 		color: lighten($highlight, 20%);
+				 	}
+				 }
+			}
 		}
 	}
+

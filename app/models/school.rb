@@ -2,8 +2,6 @@ class School < ActiveRecord::Base
 	has_many :grades
 	belongs_to :city
 	belongs_to :distance
-	validates :city_id, presence: true
-	validates :name, presence: true
-	validates :distance_id, presence: true
-
+	validates_presence_of :name, :distance_id, :city_id
+	validates :name, format: {:with => /^[a-z+ .]+$/i }
 end

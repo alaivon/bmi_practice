@@ -2,7 +2,7 @@
 
 	<h2><%= @grade.name %>(<%= @grade.school.name %>)</h2> 
 		
-	<% if user_signed_in? && @grade = current_user.grade %>
+	<% if user_signed_in? && @grade.user == current_user %>
 	<%= link_to edit_school_grade_path(@school,@grade), class: "icon"  do %>
 		<i class="fa fa-pencil-square-o fa-lg"></i>
 	<% end %>
@@ -36,13 +36,18 @@
 					<td><%= student.height %> cm</td>
 					<td><%= student.weight %> kg</td>
 					<td><%= student.bmi %></td>
-					<td>
-					<% if user_signed_in? && @grade = current_user.grade %>
-					<%= link_to edit_school_grade_student_path(@school,@grade, student) do %>
-						<i class="fa fa-wrench"></i>
-					<% end %>
+					<td class="options">
+					<% if user_signed_in? && @grade.user == current_user %>
+						<%= link_to edit_school_grade_student_path(@school,@grade, student) do %>
+							<i class="fa fa-wrench"></i>
+						<% end %>
+						<%= link_to school_grade_student_path(@school,@grade,student), method: :delete,
+							data: {confirm: "Are you sure?"} do  %>
+							<i class="fa fa-times"></i>
+						<% end %>
 					<% else %>
 						<i class="fa fa-wrench", style="opacity: 0.4"></i>
+						<i class="fa fa-times" , style="opacity: 0.4"></i>
 					<% end %>
 					</td>
 				</tr>
