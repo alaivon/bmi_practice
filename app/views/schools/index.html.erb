@@ -1,32 +1,35 @@
-<div id="table">
-	
-	<h2>School List</h2>  
-	<% if user_signed_in? %>
-	<%= link_to "New School", new_school_path  %>
-	<% end %>
-	<hr>
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-				<th>Created Id</th>
-				<th>City</th>
-				<th>Distance</th>
-				<th>School Name</th>
-			</tr>
-		</thead>
-
-		<tbody>
-			<% @schools.each_with_index do |school, i| %>
+<div class="school">
+	<div id="table">		
+		<h2>School List</h2>  
+		<% if user_signed_in? %>
+		<%= link_to "New School", new_school_path  %>
+		<% end %>
+		<hr>
+		<table class="table table-bordered">
+			<thead>
 				<tr>
-					<td><%= serial_no(school,i) %></td>
-					<td><%= school.city.name %></td>
-					<td><%= school.distance.name %></td>
-					<td><%= link_to school.name, school %></td>
+					<th>Created Id</th>
+					<th>City</th>
+					<th>Distance</th>
+					<th>School Name</th>
 				</tr>
+			</thead>
+
+			<tbody>
+				<% @schools.each_with_index do |school, i| %>
+					<tr>
+						<td><%= serial_no(school,i) %></td>
+						<td><%= school.city.name %></td>
+						<td><%= school.distance.name %></td>
+						<td><%= link_to school.name, school %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<div class="city">
+			<% City.all.each do |city| %>
+				<%= link_to city.name, schools_path(city: city.name)  %>
 			<% end %>
-		</tbody>
-
-	</table>
-
-
+		</div>
+	</div>
 </div>

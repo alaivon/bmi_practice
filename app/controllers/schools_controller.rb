@@ -3,7 +3,12 @@ class SchoolsController < AdminController
 	before_action :find_school, only: [:edit, :update, :show, :destroy]
 
 	def index
-		@schools = School.all
+		if params[:city].blank?
+			@schools = School.all.order("created_on DESC")
+		else
+			@city_id = City.find_by(name: params[:city]).id
+			@schools = School.where(city_id: @city_id).order("created_on DESC")
+		end
 	end
 
 	def new

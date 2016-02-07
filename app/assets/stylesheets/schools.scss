@@ -9,7 +9,8 @@ $light: #EDEFF5;
 $border: #E9E9E9;
 $inside: #f5f5dc;
 
-
+.school {
+	width: 100%;
 #table {
 	width: 50%;
 	margin: 0 auto 0 auto; 
@@ -30,7 +31,7 @@ $inside: #f5f5dc;
 				color: $inside;
 			}
 		}
-
+}
 }
 
 #show {
