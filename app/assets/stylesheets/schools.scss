@@ -9,11 +9,38 @@ $light: #EDEFF5;
 $border: #E9E9E9;
 $inside: #f5f5dc;
 
-.school {
-	width: 100%;
+
+.city {
+	width: 300px;
+	float: right;
+	margin: 10px auto 0 3rem;
+
+		ul {
+			list-style: none;
+			li {
+				padding-bottom: .2rem;
+			}
+			a {
+				color: brown;
+				text-decoration: none;
+				font-size: 16px;
+				font-weight: 500;
+				&:hover {
+					color: $highlight;
+				}
+			}
+		}
+}
 #table {
-	width: 50%;
-	margin: 0 auto 0 auto; 
+	float: left;
+	width: 820px;
+	margin-left: 3rem;
+	margin-right: 3rem; 
+	padding-left: 3rem;
+	table {
+		border: 2px solid $inside;
+		font-size: 16px;
+	}
 		hr {
 			width: 100%;
 			display: block;
@@ -28,11 +55,11 @@ $inside: #f5f5dc;
 			text-decoration: none;
 			&:hover {
 				font-size: 15px;
-				color: $inside;
+				color: $highlight;
 			}
 		}
 }
-}
+
 
 #show {
 	width: 40%;

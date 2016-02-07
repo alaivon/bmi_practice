@@ -2,10 +2,10 @@
 	<div id="table">		
 		<h2>School List</h2>  
 		<% if user_signed_in? %>
-		<%= link_to "New School", new_school_path  %>
+			<%= link_to "New School", new_school_path  %>
 		<% end %>
 		<hr>
-		<table class="table table-bordered">
+		<table class="table table-hover table-bordered">
 			<thead>
 				<tr>
 					<th>Created Id</th>
@@ -26,10 +26,14 @@
 				<% end %>
 			</tbody>
 		</table>
-		<div class="city">
+	</div>
+	<div class="city clearfix">
+		<ul>
+			<li><%= link_to "All School", root_path  %></li>
 			<% City.all.each do |city| %>
-				<%= link_to city.name, schools_path(city: city.name)  %>
+
+			<li><%= link_to city.name, schools_path(city: city.name)  %></li>
 			<% end %>
-		</div>
+		</ul>
 	</div>
 </div>
