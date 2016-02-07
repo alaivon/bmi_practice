@@ -15,7 +15,7 @@ class StudentsController < AdminController
 	def create
 		@student = @grade.students.build(student_params)
 		if @student.save
-			@student.update(bmi: (@student.weight / (@student.height/100)**2).round(2))
+			@student.bmi_value(@student)
 			flash[:success] = "Congratulation! New member in your class."
 			redirect_to school_grade_path(@school, @grade)
 		else
@@ -29,7 +29,7 @@ class StudentsController < AdminController
 
 	def update
 		if @student.update(student_params)
-			@student.update(bmi: (@student.weight / (@student.height/100)**2).round(2))
+			@student.bmi_value(@student)
 			flash[:success] = "Updated class member successfully."
 			redirect_to school_grade_path(@school, @grade)
 		else

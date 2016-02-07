@@ -1,6 +1,6 @@
 <div id="grade_show">
 
-	<h2><%= @grade.name %>(<%= @grade.school.name %>)</h2> 
+	<h2><%= @grade.school.name %>-<%= @grade.name %></h2> 
 		
 	<% if user_signed_in? && @grade.user == current_user %>
 	<%= link_to edit_school_grade_path(@school,@grade), class: "icon"  do %>
