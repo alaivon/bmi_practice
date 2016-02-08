@@ -13,6 +13,7 @@ $inside: #f5f5dc;
 
 .city {
 	width: 150px;
+	min-width: 150px;
 	background: white;
 	border-radius: 2rem;
 	margin: 0 auto;
@@ -25,6 +26,7 @@ $inside: #f5f5dc;
 #table {
 	float: left;
 	width: 900px;
+	min-width: 1000px;
 	margin: 0 auto; 
 	overflow: auto;
 	table {
