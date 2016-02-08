@@ -16,6 +16,7 @@ $inside: #f5f5dc;
 	width: 150px;
 	background: white;
 	border-radius: 2rem;
+	margin: 0 auto;
 	overflow: auto;
 	a {
 		color: darkslategrey;
@@ -25,8 +26,7 @@ $inside: #f5f5dc;
 #table {
 	float: left;
 	width: 700px;
-	margin: 0 auto 0 auto; 
-	padding-left: 3rem;
+	margin: 0 auto; 
 	overflow: auto;
 	table {
 		border: 2px solid $inside;
