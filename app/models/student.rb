@@ -9,6 +9,8 @@ class Student < ActiveRecord::Base
 		self.update(bmi: (student.weight / (student.height/100)**2).round(2))
 	end
 
+	
+
 
 end	
 # student.update(bmi: (@student.weight / (@student.height/100)**2).round(2))

@@ -21,4 +21,11 @@ module ApplicationHelper
     school.created_on.strftime("%Y%m%d") +  sprintf('%03d',i+1).to_s
   end
 	
+  def name_capitalize(name)
+    name_toa = name.split(" ")
+    capital = name_toa.collect {|i| i.capitalize }
+    tos = capital.join(" ")
+    tos
+  end
+
 end

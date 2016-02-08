@@ -30,7 +30,7 @@
 			<% @students.each do |student| %>
 				<tr>
 					<td><%= student.number %></td>
-					<td><%= student.name %></td>
+					<td><%= name_capitalize(student.name) %></td>
 					<td><%= student.birth %></td>
 					<td><%= student.gender %></td>
 					<td><%= student.height %> cm</td>
