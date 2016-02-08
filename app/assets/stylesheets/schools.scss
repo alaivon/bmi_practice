@@ -9,11 +9,12 @@ $light: #EDEFF5;
 $border: #E9E9E9;
 $inside: #f5f5dc;
 
+.school {
+	min-width: 1000px;
 
 .city {
 	float: right;
-	max-width: 200px;
-	min-width: 150px;
+	width: 150px;
 	background: white;
 	border-radius: 2rem;
 	overflow: auto;
@@ -23,8 +24,9 @@ $inside: #f5f5dc;
 	}
 }
 #table {
+	min-width: 1000px;
 	float: left;
-	min-width: 700px;
+	width: 700px;
 	margin: 0 auto 0 auto; 
 	padding-left: 3rem;
 	overflow: auto;
@@ -51,7 +53,7 @@ $inside: #f5f5dc;
 		}
 }
 
-
+}
 #show {
 	width: 40%;
 	margin: 0 auto 0 auto; 

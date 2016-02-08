@@ -40,6 +40,7 @@ a.navbar-brand {
 }
 
 body {
+	min-width: 1000px;
 	font-family: 'Raleway', sans-serif;
 	background: #abbaab; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, #abbaab , #ffffff); /* Chrome 10-25, Safari 5.1-6 */
