@@ -11,7 +11,7 @@ namespace :dev do
 		kilung = %w[仁愛區 中正區 信義區 中山區 安樂區 暖暖區 七堵區]
 		hsinchus = %w[東區 北區 香山區]
 		chiayis = %w[東區 西區]
-		hsinchusan = %[竹北市 竹東鎮 新埔鎮 關西鎮 湖口鄉 新豐鄉 峨眉鄉 寶山鄉 北埔鄉 芎林鄉 橫山鄉 尖石鄉 五峰鄉]
+		hsinchusan = %w[竹北市 竹東鎮 新埔鎮 關西鎮 湖口鄉 新豐鄉 峨眉鄉 寶山鄉 北埔鄉 芎林鄉 橫山鄉 尖石鄉 五峰鄉]
 		miaoli = %w[苗栗市 頭份市 卓蘭鎮 竹南鎮 後龍鎮 通霄鎮 苑裡鎮 造橋鄉 西湖鄉 頭屋鄉 公館鄉 銅鑼鄉 三義鄉 大湖鄉 獅潭鄉 三灣鄉 南庄鄉 泰安鄉]
 		changhua =%w[彰化市 員林市 和美鎮 鹿港鎮 溪湖鎮 二林鎮 田中鎮 北斗鎮 花壇鄉 芬園鄉 大村鄉 永靖鄉 伸港鄉 線西鄉 福興鄉 秀水鄉 埔心鄉 埔鹽鄉 大城鄉 芳苑鄉 竹塘鄉 社頭鄉 二水鄉 田尾鄉 埤頭鄉 溪州鄉]
 		nantou	=	%w[南投市 埔里鎮 草屯鎮 竹山鎮 集集鎮 名間鄉 鹿谷鄉 中寮鄉 魚池鄉 國姓鄉 水里鄉 信義鄉 仁愛鄉]
@@ -29,7 +29,7 @@ namespace :dev do
 			@city_id = j
 		case @city_id
 			when 1
-				for i in 0..taipei.size do
+				for i in 0...taipei.size do
 					@country = Distance.new
 					@country.name = taipei[i]
 					@country.city_id = 1
@@ -38,7 +38,7 @@ namespace :dev do
 			
 
 			when 2
-				for i in 0..newtaipei.size do
+				for i in 0...newtaipei.size do
 					@country = Distance.new
 					@country.name = newtaipei[i]
 					@country.city_id = 2
@@ -47,7 +47,7 @@ namespace :dev do
 			
 
 			when 3
-				for i in 0..taouyun.size do
+				for i in 0...taouyun.size do
 					@country = Distance.new
 					@country.name = taouyun[i]
 					@country.city_id = 3
@@ -55,7 +55,7 @@ namespace :dev do
 				end
 
 		  when 4
-				for i in 0..taichung.size do
+				for i in 0...taichung.size do
 					@country = Distance.new
 					@country.name = taichung[i]
 					@country.city_id = 4
@@ -63,7 +63,7 @@ namespace :dev do
 				end
 
 			when 5
-				for i in 0..tainan.size do
+				for i in 0...tainan.size do
 					@country = Distance.new
 					@country.name = tainan[i]
 					@country.city_id = 5
@@ -71,7 +71,7 @@ namespace :dev do
 				end
 
 				when 6
-				for i in 0..kaohsung.size do
+				for i in 0...kaohsung.size do
 					@country = Distance.new
 					@country.name = kaohsung[i]
 					@country.city_id = 6
@@ -79,7 +79,7 @@ namespace :dev do
 				end
 
 				when 7
-				for i in 0..hsinchusan.size do
+				for i in 0...hsinchusan.size do
 					@country = Distance.new
 					@country.name = hsinchusan[i]
 					@country.city_id = 7
@@ -87,7 +87,7 @@ namespace :dev do
 				end
 
 				when 8
-				for i in 0..nantou.size do
+				for i in 0...nantou.size do
 					@country = Distance.new
 					@country.name = nantou[i]
 					@country.city_id = 8
@@ -95,7 +95,7 @@ namespace :dev do
 				end
 
 				when 9
-				for i in 0..yunlin.size do
+				for i in 0...yunlin.size do
 					@country = Distance.new
 					@country.name = yunlin[i]
 					@country.city_id = 9
@@ -103,7 +103,7 @@ namespace :dev do
 				end
 
 				when 10
-				for i in 0..chiayian.size do
+				for i in 0...chiayian.size do
 					@country = Distance.new
 					@country.name = chiayian[i]
 					@country.city_id = 10
@@ -111,7 +111,7 @@ namespace :dev do
 				end
 
 				when 11
-				for i in 0..pingtung.size do
+				for i in 0...pingtung.size do
 					@country = Distance.new
 					@country.name = pingtung[i]
 					@country.city_id = 11
@@ -119,7 +119,7 @@ namespace :dev do
 				end
 
 				when 12
-				for i in 0..ilan.size do
+				for i in 0...ilan.size do
 					@country = Distance.new
 					@country.name = ilan[i]
 					@country.city_id = 12
@@ -127,7 +127,7 @@ namespace :dev do
 				end
 
 				when 13
-				for i in 0..hualien.size do
+				for i in 0...hualien.size do
 					@country = Distance.new
 					@country.name = hualien[i]
 					@country.city_id = 13
@@ -135,7 +135,7 @@ namespace :dev do
 				end
 
 				when 14
-				for i in 0..taitung.size do
+				for i in 0...taitung.size do
 					@country = Distance.new
 					@country.name = taitung[i]
 					@country.city_id = 14
@@ -143,7 +143,7 @@ namespace :dev do
 				end
 
 				when 15
-				for i in 0..penghu.size do
+				for i in 0...penghu.size do
 					@country = Distance.new
 					@country.name = penghu[i]
 					@country.city_id = 15
@@ -151,7 +151,7 @@ namespace :dev do
 				end
 
 				when 16
-				for i in 0..miaoli.size do
+				for i in 0...miaoli.size do
 					@country = Distance.new
 					@country.name = miaoli[i]
 					@country.city_id = 16
@@ -159,7 +159,7 @@ namespace :dev do
 				end
 
 				when 17
-				for i in 0..changhua.size do
+				for i in 0...changhua.size do
 					@country = Distance.new
 					@country.name = changhua[i]
 					@country.city_id = 17
@@ -167,7 +167,7 @@ namespace :dev do
 				end
 
 				when 18
-				for i in 0..kilung.size do
+				for i in 0...kilung.size do
 					@country = Distance.new
 					@country.name = kilung[i]
 					@country.city_id = 18
@@ -175,7 +175,7 @@ namespace :dev do
 				end
 
 				when 19
-				for i in 0..hsinchus.size do
+				for i in 0...hsinchus.size do
 					@country = Distance.new
 					@country.name = hsinchus[i]
 					@country.city_id = 19
@@ -183,7 +183,7 @@ namespace :dev do
 				end
 
 				when 20
-				for i in 0..chiayis.size do
+				for i in 0...chiayis.size do
 					@country = Distance.new
 					@country.name = chiayis[i]
 					@country.city_id = 20
@@ -191,7 +191,7 @@ namespace :dev do
 				end
 
 				when 21
-				for i in 0..lianjiang.size do
+				for i in 0...lianjiang.size do
 					@country = Distance.new
 					@country.name = lianjiang[i]
 					@country.city_id = 21
@@ -199,7 +199,7 @@ namespace :dev do
 				end
 
 				when 22
-				for i in 0..kinmen.size do
+				for i in 0...kinmen.size do
 					@country = Distance.new
 					@country.name = kinmen[i]
 					@country.city_id = 22
