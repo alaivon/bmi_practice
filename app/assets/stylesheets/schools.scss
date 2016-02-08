@@ -12,7 +12,8 @@ $inside: #f5f5dc;
 
 .city {
 	float: right;
-	width: 150px;
+	max-width: 200px;
+	min-width: 150px;
 	background: white;
 	border-radius: 2rem;
 	overflow: auto;
@@ -23,7 +24,7 @@ $inside: #f5f5dc;
 }
 #table {
 	float: left;
-	width: 920px;
+	min-width: 700px;
 	margin: 0 auto 0 auto; 
 	padding-left: 3rem;
 	overflow: auto;
