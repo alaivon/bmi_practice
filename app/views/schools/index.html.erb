@@ -1,4 +1,13 @@
 <div class="container school">
+	<div class="city">
+		<ul class="nav nav-pills">
+			<li><%= link_to "All School", root_path  %></li>
+			<% City.all.each do |city| %>
+
+			<li><%= link_to city.name, schools_path(city: city.name)  %></li>
+			<% end %>
+		</ul>
+	</div>
 	<div id="table" class="clearfix">		
 		<h2>School List</h2>  
 		<% if user_signed_in? %>
@@ -26,14 +35,5 @@
 				<% end %>
 			</tbody>
 		</table>
-	</div>
-	<div class="city pull-right">
-		<ul class="nav nav-pills">
-			<li><%= link_to "All School", root_path  %></li>
-			<% City.all.each do |city| %>
-
-			<li><%= link_to city.name, schools_path(city: city.name)  %></li>
-			<% end %>
-		</ul>
 	</div>
 </div>
