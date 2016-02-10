@@ -8,8 +8,11 @@ Rails.application.routes.draw do
       resources :students
     end 
   end
+  authenticated :user do
+    root 'schools#index', as: "authenticated_root"
+  end
+  root 'schools#welcome'
   # You can have the root of your site routed with "root"
-  root 'schools#index'
   get '*path' => redirect('/')
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

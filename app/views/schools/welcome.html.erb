@@ -1,0 +1,27 @@
+<div class="welcome">
+	<nav class="navbar navbar-default" role="navigation"> 
+		 <a class="navbar-brand" href="/" style="color: #B8C129">BMI for World</a>
+	      <ul class="nav navbar-nav navbar-right" style="padding-right: 1rem;">      
+         	<li><%= link_to "Sign Up", new_user_registration_path %></li>
+         	<li><%= link_to "Sign In", new_user_session_path  %></li>   
+      </ul>
+	</nav>
+
+	<h1 class="text-center">Add your student's BMI record for 100% free.</h1>
+	<div class="bmi container">
+		<h2>What is BMI?</h2>
+		<p>
+			The body mass index (or BMI) is a measure which shows whether people have the right weight for their height. <br> The World Health Organisation (WHO), governments and health workers use it. It is also sometimes called the Quetelet Index.
+		</p>
+	</div>
+	
+		<div class="why container">
+		<h2>Let's Go record your BMI</h2>
+		<p>
+			Make you handle all the student's health!
+			<br>
+			<%= link_to "Click me to Sign Up", new_user_registration_path  %>
+		</p>
+	</div>
+
+</div>

@@ -8,10 +8,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
-	<%= render 'common/navbar' %>
-	<%= notice_message %>
-<%= yield %>
+	<% if user_signed_in? %>
+		<%= render 'common/navbar' %>
+		<%= notice_message %>
+		<%= yield %>
+		<%= render 'common/footer' %>
+<% else %>
+	<%= yield %>
+	<% end %>
 
 </body>
 </html>

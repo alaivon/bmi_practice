@@ -12,5 +12,4 @@ class School < ActiveRecord::Base
 		end
 	end
 
-
 end
