@@ -1,11 +1,49 @@
-$white: #FFFFFF;
-$highlight: #d2674e;
-$dark: #22292e;
-$light: #EDEFF5;
-$border: #E9E9E9;
-$inside: #f5f5dc;
-
 .welcome {
-	background: url(welcome.jpg);
-	background-size: cover;
+		background-color: #1abc9c; /* Green */
+		min-height: 100%;
+	.bmi_info {
+		text-align: center;
+		h2 {
+		font-size: 40px;
+    color: #804D0B;
+    font-weight: 700;
+    letter-spacing: 2px;
+	  }
+	  p {
+    font-size: 18px;
+    line-height: 2em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: rgba(38,31,41,0.36);
+	  }
+	}
+}
+
+.why {
+	text-align: center;
+		min-height: 100%;
+		background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+    h2 {
+    	font-size: 36px;
+    }
+    p {
+    	margin-top: 1rem;
+    	font-size: 22px;
+    	line-height: 3rem;
+    	letter-spacing: 2px;
+    }
+    img {
+    	margin-top: 1rem;
+    }
+    a {
+    	color: red;
+    	font-weight: bold;
+    	border: 2px solid gray;
+    	line-height: 2rem;
+    	border-radius: 2em;
+    	padding: .3em;
+    	margin-bottom: 1em;
+    }
 }
