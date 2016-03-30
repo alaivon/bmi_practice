@@ -1,4 +1,4 @@
-<% if current_user.grade.nil? %>
+
 	
 <div id="form">
 	<h1><%= @school.name %></h1>
@@ -11,9 +11,6 @@
 	<%= link_to "Back", @school, class: "back"  %>
 </div>
 
-<% else %>
 
-<h2 class="text-center">You have already created a class, you cannot create again! </h2>
 
-<% end %>
 
