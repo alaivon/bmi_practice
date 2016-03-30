@@ -36,7 +36,7 @@ https://bmi-for-world-practice.herokuapp.com/
 
 
 - Grade (name, User_id school_id)
-	- belongs_to :teacher
+	- belongs_to :user
 	-	belongs_to :school
 	- has_many :students
 
