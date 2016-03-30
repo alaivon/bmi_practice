@@ -4,18 +4,16 @@ class StudentsController < AdminController
 	before_action :find_grade
 	before_action :find_student, except: [:new, :create]
 
-	def show
-		
-	end
+
 
 	def new
-		@student = @grade.students.new
+		@student = @grade.students.build
 	end
 
 	def create
 		@student = @grade.students.build(student_params)
 		if @student.save
-			@student.bmi_value(@student)
+			@student.bmi_value
 			flash[:success] = "Congratulation! New member in your class."
 			redirect_to school_grade_path(@school, @grade)
 		else
@@ -29,7 +27,7 @@ class StudentsController < AdminController
 
 	def update
 		if @student.update(student_params)
-			@student.bmi_value(@student)
+			@student.bmi_value
 			flash[:success] = "Updated class member successfully."
 			redirect_to school_grade_path(@school, @grade)
 		else
@@ -38,7 +36,8 @@ class StudentsController < AdminController
 	end
 
 	def destroy
-		
+		@student.destroy
+		redirect_to :back
 	end
 
 private

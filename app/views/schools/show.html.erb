@@ -5,17 +5,14 @@
 		<%= link_to edit_school_path(@school), class: "icon"  do %>
 			<i class="fa fa-pencil-square-o fa-lg"></i>
 		<% end %>
+	
+		<%= link_to new_school_grade_path(@school), class: "icon" do %>
+			<i class="fa fa-plus-circle fa-lg"></i>	
+		<% end %>
 	<% end %>
 	
 	<hr>
 			
-	<% if user_signed_in? && current_user.grade.nil? %>
-	<%= link_to new_school_grade_path(@school), class: "icon" do %>
-		<i class="fa fa-plus-circle fa-lg"></i>
-	<% end %>
-	
-
-		<% end %>
 
 
 	<div class="grade_list">

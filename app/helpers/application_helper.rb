@@ -22,8 +22,8 @@ module ApplicationHelper
   end
 	
   def name_capitalize(name)
-    name_toa = name.split(" ")
-    capital = name_toa.collect {|i| i.capitalize }
+    name_to_a = name.split(" ")
+    capital = name_to_a.collect {|i| i.capitalize }
     tos = capital.join(" ")
     tos
   end
